@@ -1,0 +1,10 @@
+/* 
+ * The main role of settings.gradle is to define all included 
+ * submodules and to mark the directory root of a tree of modules, so 
+ * you can only have one settings.gradle file in a multi-module project.
+ * 
+ */
+
+
+rootProject.name = 'void2'
+
