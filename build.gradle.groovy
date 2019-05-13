@@ -19,6 +19,7 @@ mainClassName = "main.Main"
 
 repositories {
     mavenCentral()
+    jcenter()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url "https://oss.sonatype.org/content/repositories/releases/" }
 }
@@ -46,6 +47,7 @@ dependencies {
     compile "io.github.libktx:ktx-actors:$ktxActorsVersion"
     compile "io.github.libktx:ktx-collections:$ktxCollectionsVersion"
     compile "io.github.libktx:ktx-style:$ktxStyleVersion"
+
 }
 
 jar {
@@ -70,10 +72,10 @@ task gameZip(type: Zip) {
     destinationDir(file('target/'))
 }
 
-task pack << {
-    TexturePacker.process(
-            'atlas', // Raw assets path.
+task pack() {
+    /*TexturePacker.process(
+            'res', // Raw assets path.
             'assets', // Output directory.
             'skin' // Name of the generated atlas (without extension).
-    )
+    )*/
 }
